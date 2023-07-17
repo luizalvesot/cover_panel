@@ -1,0 +1,73 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.my-custom-scrollbar {
+  position: relative;
+  height: 400px;
+  overflow: auto;
+}
+    
+.table-wrapper-scroll-y {
+  display: block;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+header, main, footer {
+  flex-shrink: 0;
+}
+
+.navbar{
+  background-color: rgb(55, 61, 75);
+}
+
+.cor-link{
+  color: #af0c00;
+}
+
+.busca-user{
+  box-shadow: 2px 2px 15px 3px rgba(142, 142, 142, 0.408);
+}
+
+#card-form{
+  background-color: rgb(255, 255, 255);
+  box-shadow: 5px 2px 14px 3px rgba(142, 142, 142, 0.574);
+  margin-top:2%; padding:4%;
+}
+
+#estilo-table{
+  box-shadow: 5px 2px 20px 3px rgba(142, 142, 142, 0.593);
+  font-size: 0.95rem;
+}
+
+#cab-tab{
+  background-color: rgb(55, 61, 75);
+  color: white;
+}
+
+/*footer{
+  background-color: rgb(55, 61, 75);
+  color: white;
+  
+}*/
+
+.modal{
+    z-index: 100;
+    opacity: 100;
+}
+
+.popup2{
+	position: fixed;
+	top:0; bottom:0;
+	left:0; right:0;
+	margin: auto;
+	width:300px;
+	height: 180px;
+	padding: 15px;
+}	
+
