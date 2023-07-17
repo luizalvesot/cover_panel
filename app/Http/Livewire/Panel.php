@@ -8,7 +8,7 @@ use App\Models\Cidade;
 
 class Panel extends Component
 {
-    //use WithPagination;
+    use WithPagination;
 
     protected $paginationTheme = 'bootstrap';
     protected $queryString = [
@@ -31,13 +31,12 @@ class Panel extends Component
         return view('livewire.panel', [
             'cidades' => Cidade::where('ddd', 'like', "%$this->search%")
                                 ->orWhere('name', 'like', "%$this->search%")
-                                ->paginate(),
+                                ->paginate('30'),
         ]);
-        //return view('livewire.panel');
     }
 
-    /*public function updatingSearch()
+    public function updatingSearch()
     {
         $this->resetPage();
-    }*/
+    }
 }
