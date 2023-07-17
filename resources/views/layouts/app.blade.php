@@ -47,7 +47,7 @@
         <main class="py-4">
             @yield('content')
             <!-- Footer -->
-        <footer class="p-4 mt-4 bg-white">
+        <footer class="p-4 mt-4">
             <div>
                 <p class="text-center text-body fw-light">© {{ date('Y') }} Copyright Easytec Brasil.</p>
             </div>
