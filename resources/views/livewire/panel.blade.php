@@ -51,6 +51,7 @@
               @endforelse
             </tbody>
         </table>
+    {{ $cidades->links() }}
     </div>
 </div>
 
