@@ -15,6 +15,7 @@ class Cidade extends Model
     protected $fillable = [
         'name',
         'ddd',
+        'estado',
     ];
 
     public function deleteAll()

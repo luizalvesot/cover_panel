@@ -10,16 +10,18 @@ class Panel extends Component
 {
     use WithPagination;
 
-    protected $paginationTheme = 'bootstrap';
-    protected $queryString = [
-        'search' => [
-            'except' => '',
-        ],
-    ];
-
     public $cidade;
-    public $search = '';
+    public $search_ddd = '';
     public $search_cidade = '';
+    public $search_estado = '';
+
+    protected $paginationTheme = 'bootstrap';
+
+    protected $queryString = [
+        'search_ddd'    => ['except' => ''],
+        'search_cidade' => ['except' => ''],
+        'search_estado' => ['except' => ''],
+    ];
 
     public function mount()
     {
@@ -29,9 +31,10 @@ class Panel extends Component
     public function render()
     {
         return view('livewire.panel', [
-            'cidades' => Cidade::where('ddd', 'like', "%$this->search%")
-                                ->orWhere('name', 'like', "%$this->search%")
-                                ->paginate('30'),
+            'cidades' => Cidade::where('ddd', 'like', "%$this->search_ddd%")
+                                ->Where('name', 'like', "%$this->search_cidade%")
+                                ->Where('estado', 'like', "%$this->search_estado%")
+                                ->paginate('18'),
         ]);
     }
 
